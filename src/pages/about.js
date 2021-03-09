@@ -54,7 +54,7 @@ const Recipe = ({ res }) => {
 };
 
 export async function getStaticProps(context) {
-  const data = await fetch(`http://localhost/drupal/en/jsonapi/node/recipe?include=field_media_image.field_media_image`);
+  const data = await fetch(`https://dev-umamiold.pantheonsite.io/jsonapi/node/recipe?include=field_media_image.field_media_image`);
   return {
     props: {
       res: await data.json(),
