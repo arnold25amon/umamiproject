@@ -15,7 +15,7 @@ const Index = ({ res }) => {
             <div>
               <h2>{x.attributes.title}</h2>
               <amp-img
-                  src={"http://localhost/"+imgelem.attributes.uri.url}
+                  src={"https://dev-umamiold.pantheonsite.io/"+imgelem.attributes.uri.url}
                   width="400"
                    height="350"
                 >
@@ -35,7 +35,7 @@ const Index = ({ res }) => {
 };
 
 export async function getStaticProps(context) {
-  const data = await fetch(`http://localhost/drupal/en/jsonapi/node/article?include=field_media_image.field_media_image`);
+  const data = await fetch(`https://dev-umamiold.pantheonsite.io/jsonapi/node/article?include=field_media_image.field_media_image`);
   return {
     props: {
       res: await data.json(),
