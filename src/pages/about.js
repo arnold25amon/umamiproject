@@ -22,7 +22,7 @@ const Recipe = ({ res }) => {
                   Number of serving: {y.attributes.field_number_of_servings}
                 </p> 
                 <amp-img
-                  src={"http://localhost/"+imgelem.attributes.uri.url}
+                  src={"https://dev-umamiold.pantheonsite.io/"+imgelem.attributes.uri.url}
                   width="400"
                    height="350"
                 >
