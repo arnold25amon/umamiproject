@@ -1,23 +1,31 @@
 import React from 'react'
 import Link from 'next/link'
- 
+import styles from "../../styles/Layout.module.css";
+
 const Navbar = () => {
   return(
-  <div>
+  <div id="header">
+    
     <ul>
-        <li>
+        <li style={{display:'inline'}}>
+          <Link href="/">
+            <h1>Pre-Rendered Food Blog</h1>
+          </Link>
+        </li>
+        <li style={{display:'inline', padding:'100px'}}>
             <Link href="/"> 
-            <a >Articles</a>
+            <a style={{color:'black'}}>Articles</a>
             </Link>
             
         </li>
-        <li>
+        <li style={{display:'inline'}}>
             <Link href="/about">
-            <a>Recipe</a>
+            <a style={{color:'black'}}>Recipe</a>
             </Link>
             
         </li>
     </ul>
+    
   </div>
   )
 }
