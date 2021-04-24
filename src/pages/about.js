@@ -30,7 +30,9 @@ const Recipe = ({ res }) => {
                       <h3>
                         Cooking time: {y.attributes.field_cooking_time}
                       </h3>{" "}
-                      <h3>Cooking Difficulty: {y.attributes.field_difficulty}</h3>
+                      <h3>
+                        Cooking Difficulty: {y.attributes.field_difficulty}
+                      </h3>
                       <h3>
                         Preperation Time: {y.attributes.field_preparation_time}
                       </h3>{" "}
@@ -38,15 +40,28 @@ const Recipe = ({ res }) => {
                         Number of serving:{" "}
                         {y.attributes.field_number_of_servings}
                       </h3>
-                      <amp-img
-                       width="600"
-                       height="400"
-                        src={
-                          "https://dev-umamiold.pantheonsite.io/" +
-                          imgelem.attributes.uri.url
-                        }
-                        
-                      ></amp-img>
+                      {isAmp ? (
+                        <amp-img
+                          width="300"
+                          height="300"
+                          src={
+                            "https://dev-umamiold.pantheonsite.io/" +
+                            imgelem.attributes.uri.url
+                          }
+                          alt="a cool image"
+                          layout="responsive"
+                        />
+                      ) : (
+                        <img
+                          width="300"
+                          height="300"
+                          src={
+                            "https://dev-umamiold.pantheonsite.io/" +
+                            imgelem.attributes.uri.url
+                          }
+                          alt="a cool image"
+                        />
+                      )}
                     </div>
 
                     <div className={styles.recipe}>

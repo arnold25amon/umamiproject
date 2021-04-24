@@ -4,17 +4,16 @@ import styles from "../../styles/Layout.module.css";
 
 import { Typography, Card, Container, StylesProvider } from "@material-ui/core";
 
-export const config = { amp: 'hybrid' };
+export const config = { amp: "hybrid" };
 // export const config = { amp: true };
 const Index = ({ res }) => {
   return (
     <>
       <Container style={{ padding: "4px" }}>
         <Head>
-          <title> Pre-Rendered Food Blog
- </title>
+          <title> Pre-Rendered Food Blog</title>
         </Head>
-        
+
         <h1>Articles</h1>
         {res
           ? res.data.map((x) => {
@@ -31,15 +30,28 @@ const Index = ({ res }) => {
                   <div className={styles.blogposts}>
                     <div>
                       <h2>{x.attributes.title}</h2>
-
-                      <amp-img
-                       width="600"
-                       height="400"
-                        src={
-                          "https://dev-umamiold.pantheonsite.io/" +
-                          imgelem.attributes.uri.url
-                        }
-                      ></amp-img>
+                      {isAmp ? (
+                        <amp-img
+                          width="300"
+                          height="300"
+                          src={
+                            "https://dev-umamiold.pantheonsite.io/" +
+                            imgelem.attributes.uri.url
+                          }
+                          alt="a cool image"
+                          layout="responsive"
+                        />
+                      ) : (
+                        <img
+                          width="300"
+                          height="300"
+                          src={
+                            "https://dev-umamiold.pantheonsite.io/" +
+                            imgelem.attributes.uri.url
+                          }
+                          alt="a cool image"
+                        />
+                      )}
                     </div>
                     <div
                       dangerouslySetInnerHTML={{
@@ -50,7 +62,6 @@ const Index = ({ res }) => {
                       <p>{x.relationships.feild_media_image}</p>
                     </div>
                   </div>
-                 
                 </>
               );
             })
