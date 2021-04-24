@@ -32,14 +32,14 @@ const Index = ({ res }) => {
                     <div>
                       <h2>{x.attributes.title}</h2>
 
-                      <img
+                      <amp-img
                         src={
                           "https://dev-umamiold.pantheonsite.io/" +
                           imgelem.attributes.uri.url
                         }
                         width="400px"
                         height="300px"
-                      ></img>
+                      ></amp-img>
                     </div>
                     <div
                       dangerouslySetInnerHTML={{

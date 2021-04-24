@@ -38,14 +38,14 @@ const Recipe = ({ res }) => {
                         Number of serving:{" "}
                         {y.attributes.field_number_of_servings}
                       </h3>
-                      <img
+                      <amp-img
                         src={
                           "https://dev-umamiold.pantheonsite.io/" +
                           imgelem.attributes.uri.url
                         }
                         width="600"
                         height="400"
-                      ></img>
+                      ></amp-img>
                     </div>
 
                     <div className={styles.recipe}>
