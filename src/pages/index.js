@@ -4,7 +4,7 @@ import styles from "../../styles/Layout.module.css";
 
 import { Typography, Card, Container, StylesProvider } from "@material-ui/core";
 
-// export const config = { amp: true };
+export const config = { amp: 'hybrid' };
 // export const config = { amp: true };
 const Index = ({ res }) => {
   return (
