@@ -30,6 +30,7 @@ const Index = ({ res }) => {
                   <div className={styles.blogposts}>
                     <div>
                       <h2>{x.attributes.title}</h2>
+                      </div>
                       {isAmp ? (
                         <amp-img
                           width="300"
@@ -52,7 +53,7 @@ const Index = ({ res }) => {
                           alt="a cool image"
                         />
                       )}
-                    </div>
+                    
                     <div
                       dangerouslySetInnerHTML={{
                         __html: x.attributes.body.value,

@@ -40,6 +40,7 @@ const Recipe = ({ res }) => {
                         Number of serving:{" "}
                         {y.attributes.field_number_of_servings}
                       </h3>
+                      </div>
                       {isAmp ? (
                         <amp-img
                           width="300"
@@ -62,7 +63,7 @@ const Recipe = ({ res }) => {
                           alt="a cool image"
                         />
                       )}
-                    </div>
+                    
 
                     <div className={styles.recipe}>
                       <h3>Ingredients</h3>
