@@ -33,12 +33,12 @@ const Index = ({ res }) => {
                       <h2>{x.attributes.title}</h2>
 
                       <amp-img
+                       width="600"
+                       height="400"
                         src={
                           "https://dev-umamiold.pantheonsite.io/" +
                           imgelem.attributes.uri.url
                         }
-                        width="400px"
-                        height="300px"
                       ></amp-img>
                     </div>
                     <div
