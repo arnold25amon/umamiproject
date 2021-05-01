@@ -5,7 +5,7 @@ import styles from "../../styles/Layout.module.css";
 import { Typography, Card, Container, StylesProvider } from "@material-ui/core";
 
 // export const config = { amp: "hybrid" };
-export const config = { amp: true };
+// export const config = { amp: true };
 const Index = ({ res }) => {
   return (
     <>
@@ -31,7 +31,7 @@ const Index = ({ res }) => {
                     <div>
                       <h2>{x.attributes.title}</h2>
                     </div>
-                    <amp-img
+                    <img
                       src={
                         "https://dev-umamiold.pantheonsite.io/" +
                         imgelem.attributes.uri.url

@@ -43,7 +43,7 @@ const Recipe = ({ res }) => {
 
                       </div>
                       
-                        <amp-img
+                        <img
                           width="900"
                           height="675"
                           src={
