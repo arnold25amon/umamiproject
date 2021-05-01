@@ -4,8 +4,8 @@ import styles from "../../styles/Layout.module.css";
 
 import { Typography, Card, Container, StylesProvider } from "@material-ui/core";
 
-export const config = { amp: "hybrid" };
-// export const config = { amp: true };
+// export const config = { amp: "hybrid" };
+export const config = { amp: true };
 const Index = ({ res }) => {
   return (
     <>
@@ -30,30 +30,18 @@ const Index = ({ res }) => {
                   <div className={styles.blogposts}>
                     <div>
                       <h2>{x.attributes.title}</h2>
-                      </div>
-                      {isAmp ? (
-                        <amp-img
-                          width="300"
-                          height="300"
-                          src={
-                            "https://dev-umamiold.pantheonsite.io/" +
-                            imgelem.attributes.uri.url
-                          }
-                          alt="a cool image"
-                          layout="responsive"
-                        />
-                      ) : (
-                        <img
-                          width="300"
-                          height="300"
-                          src={
-                            "https://dev-umamiold.pantheonsite.io/" +
-                            imgelem.attributes.uri.url
-                          }
-                          alt="a cool image"
-                        />
-                      )}
-                    
+                    </div>
+                      <amp-img
+                        width="300"
+                        height="300"
+                        src={
+                          "https://dev-umamiold.pantheonsite.io/" +
+                          imgelem.attributes.uri.url
+                        }
+                        alt="a cool image"
+                        layout="responsive"
+                      />
+
                     <div
                       dangerouslySetInnerHTML={{
                         __html: x.attributes.body.value,

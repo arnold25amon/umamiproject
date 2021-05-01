@@ -3,7 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../../styles/Layout.module.css";
 import { Typography, Card, Container, StylesProvider } from "@material-ui/core";
-export const config = { amp: "hybrid" };
+export const config = { amp: "true" };
 const Recipe = ({ res }) => {
   return (
     <Container style={{ padding: "4px" }}>
@@ -40,8 +40,8 @@ const Recipe = ({ res }) => {
                         Number of serving:{" "}
                         {y.attributes.field_number_of_servings}
                       </h3>
+                      
                       </div>
-                      {isAmp ? (
                         <amp-img
                           width="300"
                           height="300"
@@ -51,19 +51,7 @@ const Recipe = ({ res }) => {
                           }
                           alt="a cool image"
                           layout="responsive"
-                        />
-                      ) : (
-                        <img
-                          width="300"
-                          height="300"
-                          src={
-                            "https://dev-umamiold.pantheonsite.io/" +
-                            imgelem.attributes.uri.url
-                          }
-                          alt="a cool image"
-                        />
-                      )}
-                    
+                        />                
 
                     <div className={styles.recipe}>
                       <h3>Ingredients</h3>
